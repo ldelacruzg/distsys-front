@@ -4,6 +4,7 @@
 1. Tener instalado node.js: https://nodejs.org/es/
 
 - Pasos para ejecutar el proyecto:
+
 Si es por primera vez:
 1. En una terminal ubicado en la carpeta raiz del proyecto, ejecutar el siguiente comando: npm init
 2. Una vez descargado las dependencias, ejecutar el siguiente comando: npm run dev
