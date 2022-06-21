@@ -1,10 +1,10 @@
 import React from 'react'
 
-const Blockquote = ({ text, cite }) => {
+const Blockquote = ({ authorName = "property author name", right = false, children }) => {
   return (
-    <blockquote>
-      <p>{text}</p>
-      <cite>{cite ? cite : "Unknown Author"}</cite>
+    <blockquote className={`quote ${right ? "reverse" : ""}`}>
+      {children}
+      <cite>{authorName}</cite>
     </blockquote>
   )
 }

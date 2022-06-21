@@ -1,16 +1,27 @@
 import Blockquote from "../components/Blockquote";
+import Image from "../components/Image";
 import Paragraph from "../components/Paragraph";
+
+export const tabsHeader = [
+	{ id: 1, itemName: "Recientes", active: true },
+];
+
+export const units = [
+
+];
 
 export const posts = [
 	{
-		id: "1",
-		date: "Junio 02, 2022",
-		title: "POST TITLE",
-		weekNumber: 5,
+		id: 1,
+		date: "Junio 31, 2022",
+		title: "Introducción a la computación distribuidas",
+		weekNumber: 2,
+		unitsNumber: 1,
 		description:
 			"There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour.",
 		content: (
 			<>
+				<Image src="36-min.jpg" />
 				<Paragraph dropcap={true}>
 					Aliquam fringilla, sapien eget scelerisque placerat, lorem libero
 					cursus lorem, sed sodales lorem libero eu sapien. Nunc mattis feugiat
@@ -27,9 +38,33 @@ export const posts = [
 					ullamcorper ut tempor ut, mattis eu lacus. Morbi rhoncus aliquet
 					tellus, id accumsan enim sollicitudin vitae.
 				</Paragraph>
-				<Blockquote text="Contenido" cite="Luis De La Cruz" />
+				<Blockquote authorName="Simón Bolivar" right={true}>
+					<Paragraph>Si la naturaleza se opone, lucharemos contra ella</Paragraph>
+				</Blockquote>
 			</>
 		), // tiene que ser un componente usando Paragraph, Blockquote, etc...
-		image: "work-table.jpg", // de momento no sirve para el detalle del post
+		image: "work-table.jpg",
 	},
+	{
+		id: 2,
+		date: "Junio 03, 2022",
+		title: "Paradigmas de la computación distribuida",
+		weekNumber: 2,
+		unitsNumber: 1,
+		description:
+			"There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour.",
+		content: "",
+		image: "work-table.jpg",
+	},
+	{
+		id: 3,
+		date: "Junio 03, 2022",
+		title: "El paradigma Cliente/Servidor",
+		weekNumber: 3,
+		unitsNumber: 2,
+		description:
+			"There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour.",
+		content: "",
+		image: "work-table.jpg",
+	}
 ];

@@ -2,7 +2,7 @@ import React from 'react'
 import { NavLink } from 'react-router-dom'
 import { PATH_IMAGES } from '../helpers'
 
-const PostItem = ({ urlImage = null, title, date, weekNumber, description, id }) => {
+const PostItem = ({ urlImage = null, title, date, weekNumber, unitsNumber, description, id }) => {
   return (
     <div className="blog-post-item col-md-6 col-sm-6">
       {/* IMAGE */}
@@ -22,6 +22,10 @@ const PostItem = ({ urlImage = null, title, date, weekNumber, description, id })
         <li>
           <i className="fa fa-list-ol" />
           <span className="font-lato">Semana {weekNumber}</span>
+        </li>
+        <li>
+          <i className="fa fa-book"></i>
+          <span className="font-lato">Unidad {unitsNumber}</span>
         </li>
       </ul>
       <p>{description}</p>
