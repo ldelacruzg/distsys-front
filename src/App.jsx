@@ -1,4 +1,5 @@
 import { Route, Routes } from "react-router-dom"
+import { PostsProvider } from "./context/PostsContext"
 import Blog from "./pages/Blog"
 import Home from "./pages/Home"
 import NotFound from "./pages/NotFound"
@@ -10,7 +11,11 @@ function App() {
     <Routes>
       <Route element={<Smarty />}>
         <Route path="/" element={<Home />} />
-        <Route path="blog/posts" element={<Blog />} />
+        <Route path="blog/posts" element={
+          <PostsProvider>
+            <Blog />
+          </PostsProvider>
+        } />
         <Route path="blog/posts/:postId" element={<PostDetail />} />
         <Route path="*" element={<NotFound />} />
       </Route>

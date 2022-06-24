@@ -7,7 +7,12 @@ export const tabsHeader = [
 ];
 
 export const units = [
-
+	{ id: 1, name: "Aplicaciones Distribuidas - Una visión global" },
+	{ id: 2, name: "El paradigma Cliente/Servidor" },
+	{ id: 3, name: "Sockets" },
+	{ id: 4, name: "Programación distribuida" },
+	{ id: 5, name: "Hilos" },
+	{ id: 6, name: "Arquitectura de aplicaciones" },
 ];
 
 export const posts = [

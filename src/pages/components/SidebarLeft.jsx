@@ -4,8 +4,19 @@ import CustomTab from "./CustomTab"
 import Sidenav from "../../components/Sidenav"
 import ListGroup from "../../components/ListGroup"
 import ListItem from "../../components/ListGroup/ListItem"
+import { useEffect, useState } from "react"
+import { posts, units } from "../../data"
 
 const SidebarLeft = () => {
+  const [unitsCustom, setUnitsCustom] = useState([]);
+
+  useEffect(() => {
+    setUnitsCustom(units.map(({ id, name }) => {
+      const post = posts.filter(({ unitsNumber }) => unitsNumber === id);
+      return { unitId: id, name, num: post.length }
+    }));
+  }, []);
+
   return (
     <Sidebar>
       <InlineSearch />
@@ -13,15 +24,14 @@ const SidebarLeft = () => {
 
       <Sidenav title="UNIDADES">
         <ListGroup>
-          <ListItem
-            title="Aplicaciones Distribuidas - Una visión global"
-            num="0"
-          />
-          <ListItem title="El paradigma Cliente/Servidor" num="0" />
-          <ListItem title="Sockets" num="0" />
-          <ListItem title="Programación distribuida" num="0" />
-          <ListItem title="Hilos" num="0" />
-          <ListItem title="Arquitectura de aplicaciones" num="0" />
+          {unitsCustom.map(({ name, num, unitId }, index) =>
+            <ListItem
+              key={index}
+              title={name}
+              num={num}
+              unitId={unitId}
+            />
+          )}
         </ListGroup>
       </Sidenav>
 

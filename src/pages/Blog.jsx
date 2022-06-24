@@ -1,9 +1,11 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import PostItem from '../components/PostItem'
-import { posts } from '../data';
+import { PostsContext, PostsProvider } from '../context/PostsContext';
 import SidebarLeft from './components/SidebarLeft';
 
 const Blog = () => {
+  const { postsProvider: posts } = useContext(PostsContext);
+
   return (
     <div className="container">
       <div className="row">
