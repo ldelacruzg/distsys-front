@@ -1,5 +1,5 @@
-import React, { useEffect } from "react";
-import { useParams } from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import { Link, useParams } from "react-router-dom";
 import { posts } from "../data";
 import CustomSidebar from "./components/SidebarRight";
 
@@ -45,14 +45,22 @@ const PostDetail = () => {
           <div className="divider">{/* divider */}</div>
           <ul className="pager">
             <li className="previous">
-              <a className="noborder" href="#">
+              <Link
+                className={`noborder ${Number.parseInt(postId) - 1 > 0 ? "" : "hide"
+                  }`}
+                to={`/blog/posts/${Number.parseInt(postId) - 1}`}
+              >
                 ← Anterior Post
-              </a>
+              </Link>
             </li>
             <li className="next">
-              <a className="noborder" href="#">
+              <Link
+                className={`noborder ${Number.parseInt(postId) + 1 > posts.length ? "hide" : ""
+                  }`}
+                to={`/blog/posts/${Number.parseInt(postId) + 1}`}
+              >
                 Siguiente Post →
-              </a>
+              </Link>
             </li>
           </ul>
           <div className="divider">{/* divider */}</div>

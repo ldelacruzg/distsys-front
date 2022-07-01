@@ -4,7 +4,7 @@ import { PATH_IMAGES } from '../helpers'
 
 const PostItem = ({ urlImage = null, title, date, weekNumber, unitsNumber, description, id }) => {
   return (
-    <div className="blog-post-item col-md-6 col-sm-6">
+    <div className="blog-post-item col-md-4 col-sm-4">
       {/* IMAGE */}
       {
         urlImage ? (
@@ -28,7 +28,7 @@ const PostItem = ({ urlImage = null, title, date, weekNumber, unitsNumber, descr
           <span className="font-lato">Unidad {unitsNumber}</span>
         </li>
       </ul>
-      <p>{description}</p>
+      <p className="text-justify">{description}</p>
       <NavLink to={`${id}`} className="btn btn-reveal btn-default">
         <i className="fa fa-plus" />
         <span>Leer más</span>

@@ -1,12 +1,13 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
-const TabItem = ({ title, date }) => {
+const TabItem = ({ title, date, postId = "#" }) => {
   return (
     <div className="row tab-post">
       <div className="col-md-12 col-sm-12 col-xs-12">
-        <a href="blog-sidebar-left.html" className="tab-post-link">
+        <Link to={`/blog/posts/${postId}`} className="tab-post-link">
           {title}
-        </a>
+        </Link>
         <small>{date}</small>
       </div>
     </div>

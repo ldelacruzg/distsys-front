@@ -5,6 +5,7 @@ import Home from "./pages/Home"
 import NotFound from "./pages/NotFound"
 import PostDetail from "./pages/PostDetail"
 import Smarty from "./template/smarty/Smarty"
+import "./index.css"
 
 function App() {
   return (
@@ -16,7 +17,11 @@ function App() {
             <Blog />
           </PostsProvider>
         } />
-        <Route path="blog/posts/:postId" element={<PostDetail />} />
+        <Route path="blog/posts/:postId" element={
+          <PostsProvider>
+            <PostDetail />
+          </PostsProvider>
+        } />
         <Route path="*" element={<NotFound />} />
       </Route>
     </Routes>
