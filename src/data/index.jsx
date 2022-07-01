@@ -48,7 +48,7 @@ export const posts = [
 				</Paragraph>
 			</>
 		),
-		image: "work-table.jpg",
+		image: "image-1.jpg",
 	},
 	{
 		id: 2,
@@ -81,7 +81,7 @@ export const posts = [
 				</Paragraph>
 			</>
 		),
-		image: "work-table.jpg",
+		image: "image-2.jpg",
 	},
 	{
 		id: 3,
@@ -113,7 +113,7 @@ export const posts = [
 					Hay partes de la lógica que residen en el cliente, normalmente las que se refieren a la interfaz de usuario, mientras que las del negocio y de datos suelen residir en los servidores, que proporcionan los mecanismos necesarios para el trabajo en entornos multiusuarios. En este tipo de modelo se aplica íntegramente el modelo de servicios ya que, cada una de las capas se corresponde con cada una de las lógicas descritas
 				</Paragraph>
 			</>,
-		image: "work-table.jpg",
+		image: "image-3.jpg",
 	},
 	{
 		id: 4,
@@ -147,7 +147,7 @@ export const posts = [
 					<li>Destrucción, cierre del socket</li>
 				</ul>
 			</>,
-		image: "work-table.jpg",
+		image: "image-4.jpg",
 	},
 	{
 		id: 5,
@@ -182,7 +182,7 @@ export const posts = [
 				<h3>DatagramPacket</h3>
 				<Paragraph>Un DatagramSocket envía y recibe los paquetes y un DatagramPacket contiene la información relevante. Cuando se desea recibir un datagrama, éste deberá almacenarse bien en un búfer o un array de bytes. Y cuando preparamos un datagrama para ser enviado, el DatagramPacket no sólo debe tener la información, sino que además debe tener la dirección IP y el puerto de destino, que puede coincidir con un puerto TCP</Paragraph>
 			</>,
-		image: "work-table.jpg",
+		image: "image-5.jpg",
 	},
 	{
 		id: 6,
@@ -246,6 +246,6 @@ export const posts = [
 					<li>Necesita enviar y recibir tanto datos binarios como en texto plano</li>
 				</ul>
 			</>,
-		image: "work-table.jpg",
+		image: "image-6.jpg",
 	}
 ];
