@@ -17,9 +17,86 @@ export const units = [
 export const posts = [
 	{
 		id: 1,
+		date: "Mayo 31, 2022",
+		title: "Introducción a la Computación Distribuida",
+		weekNumber: 2,
+		unitsNumber: 1,
+		description:
+			"Sistemas cuyos componentes hardware y software, que están en computadoras conectadas en red, se comunican y coordinan sus acciones mediante el paso de mensajes, para el logro de un objetivo.",
+		content:
+			<>
+				<Blockquote authorName="Losada Sergio, 2018">
+					<p>Un sistema distribuido es un conjunto de equipos independientes que actúan de forma transparente actuando como un único equipo. Su objetivo es descentralizar tanto el almacenamiento de la información como el procesamiento". </p>
+				</Blockquote>
+				<div className="imageP">
+					<img src="../../assets/images/detail-post/image-10.jpg"/>
+				</div>
+				<br /> <br />
+				<h3>Ventajas y Desventajas de la computación distribuida</h3>
+				<table className="table table-bordered table-striped">
+					<thead className="bg-primary">
+						<tr>
+							<th>Ventajas</th>
+							<th>Desventajas</th>
+						</tr>
+					</thead>
+					<tbody className="text-justify">
+						<tr>
+							<td>
+								<ul>
+									<li>Procesadores más poderosos y a menos costos (Uso de nuevas interfaces, Desarrollo de Estaciones con más capacidades, etc).</li>
+									<li>Compartición de Recursos (Dispositivos (Hardware) y Programas (Software)).</li>
+									<li>Eficiencia y Flexibilidad (Respuesta Rápida, Empleo de técnicas de procesamiento distribuido, etc).</li>
+									<li>Disponibilidad y Confiabilidad (Sistema poco propenso a fallas y mayores servicios que elevan la funcionalidad.).</li>
+									<li>Crecimiento Modular (Es inherente al crecimiento, Inclusión rápida de nuevos recursos y los recursos actuales no afectan)</li>
+								</ul>
+							</td>
+							<td>
+								<ul>
+									<li>Requerimientos de mayores controles de procesamiento.</li>
+									<li>Velocidad de propagación de información ( Muy lenta a veces).</li>
+									<li>Servicios de replicación de datos y servicios con posibilidades de fallas.</li>
+									<li>Mayores controles de acceso y proceso ( Commit ).</li>
+									<li>Administración más compleja.</li>
+									<li>Costos.</li>
+								</ul>
+							</td>
+						</tr>
+
+					</tbody>
+				</table>
+				<ul>
+					<Image src="image-9.jpg" right={true}/>
+					<li>
+						<strong>Computación Paralela: </strong>Es una forma de cómputo en la que muchas instrucciones se ejecutan simultáneamente, operando sobre el principio de que problemas grandes, a menudo se pueden dividir en unos más pequeños, que luego son resueltos simultáneamente (en paralelo). La computación paralela es una forma de cómputo en la que se hace uso de 2 o más procesadores para resolver una tarea.
+					</li>
+					<br /><br />
+					<Image src="image-8.jpg" />
+					<li>
+						<strong>Computación Ubicua: </strong>La computación ubicua, conocida por sus siglas en ingles Pervasive computing o computación pervasiva, es una tendencia de todas las cosas hacia la conexión en red, usando como base los sistemas de información. Se puede definir en términos referidos a la Omnipresencia. La Omnipresencia es la capacidad que tiene una entidad de estar presente en varias partes de manera simultánea. 
+					</li>
+				</ul>
+			</>,
+		image: "image-7.jpg",
+	},
+	{
+		id: 2,
+		date: "Junio 07, 2022",
+		title: "Paradigma de la Computación Distribuida",
+		weekNumber: 3,
+		unitsNumber: 1,
+		description:
+			"",
+		content:
+			<>
+			</>,
+		image: "image-8.jpg",
+	},
+	{
+		id: 3,
 		date: "Junio 07, 2022",
 		title: "El paradigma Cliente/Servidor",
-		weekNumber: 3,
+		weekNumber: 4,
 		unitsNumber: 2,
 		description:
 			"Para la explicación de este paradigma debemos tener en claro la definición de lo que se refiere a cliente y lo que es servidor.",
@@ -51,10 +128,10 @@ export const posts = [
 		image: "image-1.jpg",
 	},
 	{
-		id: 2,
+		id: 4,
 		date: "Junio 10, 2022",
 		title: "Modelo Cliente/Servidor de 2 capas",
-		weekNumber: 3,
+		weekNumber: 4,
 		unitsNumber: 2,
 		description:
 			"Uno de los objetivos de las aplicaciones de 2 capas es separar la lógica de acceso a los datos de lo que es la interfaz de usuario y trasladarla al servidor.",
@@ -63,7 +140,9 @@ export const posts = [
 				<Paragraph dropcap={true}>
 					Uno de los objetivos de las aplicaciones de 2 capas es separar la lógica de acceso a los datos de lo que es la interfaz de usuario y trasladarla al servidor. Habitualmente, se implementan servicios como procedimientos almacenados en el sistema gestor de datos, con esto se pretende reducir la carga de los clientes y centralizar las operaciones comunes de acceso a los datos.
 				</Paragraph>
-				<Paragraph>El Sistema Gestor de Datos también suele incorporar la funcionalidad necesaria para trabajar en entornos multiusuarios. En este modelo intervienen únicamente dos entidades:</Paragraph>
+				<Paragraph>
+					El Sistema Gestor de Datos también suele incorporar la funcionalidad necesaria para trabajar en entornos multiusuarios. En este modelo intervienen únicamente dos entidades:
+			    </Paragraph>
 				<ul>
 					<li>El cliente</li>
 					<li>El servidor</li>
@@ -84,10 +163,10 @@ export const posts = [
 		image: "image-2.jpg",
 	},
 	{
-		id: 3,
+		id: 5,
 		date: "Junio 10, 2022",
 		title: "Modelo Cliente/Servidor multicapa",
-		weekNumber: 3,
+		weekNumber: 4,
 		unitsNumber: 2,
 		description:
 			"La arquitectura Cliente/Servidor genérica tiene dos tipos de nodos en la red: clientes y servidores. Consecuentemente, estas arquitecturas genéricas se refieren a veces como arquitecturas de dos niveles o dos capas.",
@@ -116,7 +195,7 @@ export const posts = [
 		image: "image-3.jpg",
 	},
 	{
-		id: 4,
+		id: 6,
 		date: "Junio 21, 2022",
 		title: "Sockets en java",
 		weekNumber: 5,
@@ -150,7 +229,7 @@ export const posts = [
 		image: "image-4.jpg",
 	},
 	{
-		id: 5,
+		id: 7,
 		date: "Junio 21, 2022",
 		title: "Clases para las comunicaciones de red en java y java.net",
 		weekNumber: 5,
@@ -185,8 +264,8 @@ export const posts = [
 		image: "image-5.jpg",
 	},
 	{
-		id: 6,
-		date: "Junio 10, 2022",
+		id: 8,
+		date: "Junio 28, 2022",
 		title: "WebSockets",
 		weekNumber: 6,
 		unitsNumber: 3,

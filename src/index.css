@@ -2,3 +2,20 @@
 .row ul li {
 	font-size: 16px;
 }
+
+.imageP {
+	text-align: center;
+}
+
+.imageP img {
+	height: 220px;
+	width: 300px;
+}
+
+blockquote {
+	text-align: justify;
+}
+
+table thead th {
+	text-align: center;
+}
