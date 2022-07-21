@@ -9,7 +9,6 @@
 
 .imageP img {
 	height: 220px;
-	width: 300px;
 }
 
 blockquote {
@@ -18,4 +17,9 @@ blockquote {
 
 table thead th {
 	text-align: center;
+}
+
+h4 {
+	text-align: center;
+	font-weight: bold;
 }

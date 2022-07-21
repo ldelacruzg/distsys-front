@@ -29,7 +29,7 @@ export const posts = [
 					<p>Un sistema distribuido es un conjunto de equipos independientes que actúan de forma transparente actuando como un único equipo. Su objetivo es descentralizar tanto el almacenamiento de la información como el procesamiento". </p>
 				</Blockquote>
 				<div className="imageP">
-					<img src="../../assets/images/detail-post/image-10.jpg"/>
+					<img src="../../assets/images/detail-post/image-10.jpg" alt="Imagen de sistema distribuido"/>
 				</div>
 				<br /> <br />
 				<h3>Ventajas y Desventajas de la computación distribuida</h3>
@@ -76,6 +76,18 @@ export const posts = [
 						<strong>Computación Ubicua: </strong>La computación ubicua, conocida por sus siglas en ingles Pervasive computing o computación pervasiva, es una tendencia de todas las cosas hacia la conexión en red, usando como base los sistemas de información. Se puede definir en términos referidos a la Omnipresencia. La Omnipresencia es la capacidad que tiene una entidad de estar presente en varias partes de manera simultánea. 
 					</li>
 				</ul>
+				<br />
+				<Paragraph>
+					Los campos que abarca la computación ubicua son:
+				</Paragraph>
+				<ul>
+					<li>Almacenamiento de información</li>
+					<li>Visualización de información</li>
+					<li>Simulación y realidad aumentada</li>
+					<li>Construcción y modelado</li>
+					<li>Gestión, configuración y control de sistemas complejos</li>
+					<li>Educación</li>
+				</ul>
 			</>,
 		image: "image-7.jpg",
 	},
@@ -86,9 +98,87 @@ export const posts = [
 		weekNumber: 3,
 		unitsNumber: 1,
 		description:
-			"",
+			"Se define la palabra paradigma como “un patrón, ejemplo, o modelo”. En el estudio de cualquier materia de gran complejidad, es útil identificar los patrones o modelos básicos y clasificar los detalles de acuerdo con estos modelos. Para ello es necesario seguir una serie de paradigmas sobre aplicaciones distribuidas.",
 		content:
 			<>
+				<Paragraph>
+					Existen diferentes aproximaciones a la computación distribuida, denominadas paradigmas. Entre ellas se pueden destacar los modelos de desarrollo basados en modelo cliente-servidor, basados en pares de iguales, basados en mensajes o los modelos más “antiguos” que usaban RPC (aunque en la actualidad hay otro modelo RPC, denominado XML-RPC que se emplea de manera extensa).  A continuación se muestra los diversos paradigmas que existen:
+				</Paragraph>
+				<div className="imageP">
+					<img src="../../assets/images/detail-post/image-11.jpg" alt="Paradigmas de Computación Distribuida" />
+				</div>
+
+				<br />
+
+				<h4>Pasos de Mensajes</h4>
+				<Image src="image-12.jpg" />
+				<Paragraph>
+				Es el más básico e importante. Un proceso (emisor) envía un mensaje (petición) a otro proceso (receptor). El mensaje se entrega al receptor que lo procesa y envía una respuesta. Esta respuesta desencadena una serie de peticiones que darán lugar a más mensajes.
+				</Paragraph>
+				<Paragraph>
+					Se realizan las operaciones como si se tratara como si se tratara de un fichero. De este modo las operaciones sirven para encapsular el de talle de la comunicación a nivel del SO (el programador puede hacer uso de ellas para enviar y recibir mensajes sin preocuparse por los detalles).
+				</Paragraph>
+				<Paragraph>
+					La interfaz de programación de aplicaciones de sockets se basa en este paradigma. Los procesos intercambian información así: un emisor inserta un mensaje en el socket y el receptor extrae el mensaje del socket para leerlo.
+				</Paragraph>
+
+				<h4>Cliente - Servidor</h4>
+				<Paragraph>
+					Uno de los más conocidos. Este modelo asigna roles diferentes a los dos procesos que colaboran. De esta manera la sincronización de eventos se simplifica.
+				</Paragraph>
+				<ul>
+					<li>
+						<strong>Servidor: </strong>proveedor del servicio, espera de forma pasiva la llegada de peticiones.
+					</li>
+					<li>
+						<strong>Cliente: </strong>envía las peticiones al servidor y espera por las respuestas.
+					</li>
+				</ul>
+				<div className="imageP">
+					<img src="../../assets/images/detail-post/image-13.jpg" alt="Cliente - Servidor" />
+				</div>
+
+				<Paragraph>
+					Las operaciones serán aquellas necesarias para, en el servidor, esperar y aceptar peticiones y, en el cliente, emitir peticiones y aceptar respuestas. Este modelo proporciona una abstracción eficiente para servicios de red por lo que se usan mucho en los servicios de Internet. Ejemplos: HTTP, FTP, DNS, etc.
+				</Paragraph>
+
+				<h4>Peer - to - Peer</h4>
+				<Image src="image-14.jpg" right={true}/>
+				<Paragraph>
+					Los procesos participantes interpretan los mismos papeles (pueden actuar al mismo tiempo como clientes y servidores en función del rol más eficiente para la red). Los ordenadores que en cliente-servidor eran clientes se intercambian recursos y servicios (intercambio de información, almacenamiento, etc.) entre ellos de manera directa. Cualquier participante puede enviar una petición a otro y recibir una respuesta.
+				</Paragraph>
+				<br />
+				<Paragraph>
+					Para servicios centralizados es mejor el paradigma de cliente-servidor. El paradigma peer-to-peer es más apropiado para aplicaciones menos centralizadas como transferencia de mensajes, transferencia de ficheros o videoconferencia. Un ejemplo muy conocido es Napster. A pesar de esto hay muchas aplicaciones que utilizan los dos modelos combinados es mejor esta solución desde el punto de vista de la privacidad.
+				</Paragraph>
+				<br />
+
+				<h4>Llamadas a procedimientos remotos (Remote Procedure Call)</h4>
+				<Paragraph>
+					Según las aplicaciones crecen en complejidad se va necesitando un nivel mayor de abstracción para la programación distribuida. Sería deseable tener un paradigma que permita que el software distribuido se programase de forma similar al convencional. Esto se consigue gracias al paradigma de llamadas a procedimientos remotos que además consigue un alto nivel de abstracción tanto para la comunicación de procesos como para la sincronización de eventos.
+				</Paragraph>
+				<Paragraph>
+					Imaginemos dos procesos independientes (pueden residir en máquinas diferentes) A y B. Si A desea realizar una petición a B, invoca un procedimiento de B pasando unos argumentos junto a la llamada. Una llamada a un procedimiento remoto dispara una acción predefinida en un procedimiento de B. Al finalizar dicho procedimiento el proceso B devuelve un valor a A.
+				</Paragraph>
+				<div className="imageP">
+					<img src="../../assets/images/detail-post/image-15.jpg" alt="Llamadas a procedimientos remotos" />
+				</div>
+				<Paragraph>
+					Hay fundamentalmente dos APIs y las dos incorporan herramientas para transformar invocaciones remotas a llamadas a procedimientos locales:
+				</Paragraph>
+				<div className="imageP">
+					<img src="../../assets/images/detail-post/image-16.jpg" alt="Llamadas a procedimientos remotos" />
+				</div>
+				<Paragraph>
+				Los módulos se generan automáticamente. Se busca que el programador se abstraiga de los módulos y que para él sea como una llamada local.
+				</Paragraph>
+
+				<h4>Agentes Móviles</h4>
+				<Image src="image-17.jpg"/>
+				<Paragraph>
+					Un agente es un programa u objeto transportable. En este modelo el agente se lanza desde un ordenador viajando de forma autómata a otro de acuerdo con el itinerario que posea. En cada parada accederá a los recursos y servicios necesarios para realizar su tarea. Es necesario proporcionarle unos argumentos y él resolverá el problema. Un agente ha de ser móvil, autónomo e inteligente. Además tiene un lenguaje de programa muy complejo.
+				</Paragraph>
+
 			</>,
 		image: "image-8.jpg",
 	},
