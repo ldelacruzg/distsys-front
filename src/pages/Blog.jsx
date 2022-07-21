@@ -1,11 +1,22 @@
-import React, { useContext } from 'react'
-import PostItem from '../components/PostItem'
-import { PostsContext, PostsProvider } from '../context/PostsContext';
-import SidebarLeft from './components/SidebarLeft';
+import React, { useContext, useEffect, useState } from "react";
+import PostItem from "../components/PostItem";
+import { PostsContext, PostsProvider } from "../context/PostsContext";
+import SidebarLeft from "./components/SidebarLeft";
 
 const Blog = () => {
   const { postsProvider: posts } = useContext(PostsContext);
+  const [postsSliceFull, setPostsSliceFull] = useState([])
+  // partir un arreglo en 3
 
+  useEffect(() => {
+    let slicePosts = []
+    for (let i = 0; i < posts.length;) {
+      slicePosts.push(posts.slice(i, i += 3));
+    }
+    setPostsSliceFull(slicePosts);
+  }, [posts]);
+
+  console.log(postsSliceFull);
   return (
     <div className="container">
       <div className="row">
@@ -14,9 +25,9 @@ const Blog = () => {
 
         {/* RIGHT */}
         <div className="col-md-9 col-sm-9">
-          <div className="row">
-            {posts.map(
-              (post) => (
+          {postsSliceFull.map((array, index) => (
+            <div className="row" key={index}>
+              {array.map((post) => (
                 <PostItem
                   key={post.id}
                   id={post.id}
@@ -27,13 +38,13 @@ const Blog = () => {
                   unitsNumber={post.unitsNumber}
                   urlImage={post.image ? post.image : null}
                 />
-              )
-            )}
-          </div>
+              ))}
+            </div>
+          ))}
         </div>
       </div>
     </div>
   );
-}
+};
 
-export default Blog
+export default Blog;

@@ -3,6 +3,7 @@
 	font-size: 16px;
 }
 
+<<<<<<< HEAD
 .imageP {
 	text-align: center;
 }
@@ -19,3 +20,19 @@ blockquote {
 table thead th {
 	text-align: center;
 }
+=======
+.blog-post-item p {
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 4;
+	overflow: hidden;
+}
+
+.blog-post-item h2 {
+	height: 70px;
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 2;
+	overflow: hidden;
+}
+>>>>>>> f6bc24bd658383ba58f36e101a18f9d0f6ba0c74
