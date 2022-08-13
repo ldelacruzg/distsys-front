@@ -484,6 +484,52 @@ export const posts = [
 				<Paragraph>
 					RPC y RMI son similares, pero la diferencia básica entre RPC y RMI es que RPC admite la programación de procedimientos, por otro lado, RMI admite la programación orientada a objetos.
 				</Paragraph>
+				<table className="table table-bordered table-striped">
+					<tr>
+						<th className="bg-primary">RCP</th>
+						<th className="bg-primary">RMI</th>
+					</tr>
+					<tr>
+						<td>RPC es una biblioteca y una plataforma dependiente del sistema operativo.</td>
+						<td>Considerando que es una plataforma Java.</td>
+					</tr>
+					<tr>
+						<td>RPC admite la programación de procedimientos.</td>
+						<td>RMI admite la programación orientada a objetos.</td>
+					</tr>
+					<tr>
+						<td>RPC es menos eficiente en comparación con RMI.</td>
+						<td>Mientras que RMI es más eficiente que RPC.</td>
+					</tr>
+					<tr>
+						<td>RPC genera más gastos generales.</td>
+						<td>Si bien crea menos gastos generales que RPC.</td>
+					</tr>
+					<tr>
+						<td>Los parámetros que se pasan en RPC son datos ordinarios o normales.</td>
+						<td>Mientras que en RMI, los objetos se pasan como parámetro.</td>
+					</tr>
+					<tr>
+						<td>RPC es la versión anterior de RMI.</td>
+						<td>Si bien es la versión sucesora de RPC.</td>
+					</tr>
+					<tr>
+						<td>RPC no proporciona ninguna seguridad.</td>
+						<td>Si bien proporciona seguridad a nivel de cliente.</td>
+					</tr>
+					<tr>
+						<td>Su costo de desarrollo es enorme.</td>
+						<td>Si bien su costo de desarrollo es justo o razonable.</td>
+					</tr>
+					<tr>
+						<td>Hay un gran problema de control de versiones en RPC.</td>
+						<td>Si bien es posible el control de versiones mediante RDMI.</td>
+					</tr>
+					<tr>
+						<td>Se necesitan múltiples códigos para una aplicación simple en RPC.</td>
+						<td>Si bien hay múltiples códigos, no son necesarios para una aplicación simple en RMI.</td>
+					</tr>
+				</table>
 			</>,
 			image: "programacion_distribuida.png",
 	},
