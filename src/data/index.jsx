@@ -427,11 +427,11 @@ export const posts = [
 			"Es un paradigma de la programación enfocado en desarrollar sistemas distribuidos, abiertos, escalables, transparentes y tolerantes a fallos.",
 		content:
 			<>
-				<Image src="image-7.png" size={450} />
+				<Image src="prog_dis.png" size={300} />
 				<Blockquote authorName="Manayay Chavez, 2015">
-					<Paragraph>
+					<p>
 						Es un paradigma de la programación enfocado en desarrollar sistemas distribuidos, abiertos, escalables, transparentes y tolerantes a fallos. Este paradigma es el resultado natural del uso de las computadoras y las redes.
-					</Paragraph>
+					</p>
 				</Blockquote>
 				<Paragraph>
 					La programación distribuida típicamente cae en algunas de las varias arquitecturas básicas como lo son:
@@ -443,6 +443,7 @@ export const posts = [
 					<li>Objetos distribuidos</li>
 				</ul>
 				<h2>Remote procedure call (RPC)</h2>
+				<Image src="Rpc.png" size={420} />
 				<Paragraph>
 					Llamada por procedimiento remoto es una tecnología de comunicación orientada a procesos para aplicaciones cliente-servidor. También se conoce como llamadas de subrutina o llamadas de función.
 				</Paragraph>
@@ -463,6 +464,7 @@ export const posts = [
 					<li>Las llamadas de proceso remoto aumentan el costo.</li>
 				</ul>
 				<h2>Remote method invocation (RMI)</h2>
+				<Image src="rmi.gif" size={400} />
 				<Paragraph>
 					Las aplicaciones RMI a menudo comprenden dos programas separados, un servidor y un cliente. Un programa de servidor típico crea algunos objetos remotos, hace referencias a estos objetos accesibles y espera a que los clientes invoquen métodos en estos objetos. Un programa cliente típico obtiene una referencia remota a uno o más objetos remotos en un servidor y luego invoca métodos en ellos. 
 				</Paragraph>
@@ -478,10 +480,11 @@ export const posts = [
 					<li>Hacer que las clases sean accesibles en red.</li>
 					<li>Iniciando la aplicación</li>
 				</ul>
-				<h2>Requerimientos para los servidores</h2>
+				<h2>RPC VS RMI</h2>
 				<Paragraph>
 					RPC y RMI son similares, pero la diferencia básica entre RPC y RMI es que RPC admite la programación de procedimientos, por otro lado, RMI admite la programación orientada a objetos.
 				</Paragraph>
 			</>,
+			image: "programacion_distribuida.png",
 	},
 ];
