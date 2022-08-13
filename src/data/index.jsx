@@ -12,6 +12,7 @@ export const units = [
 	{ id: 4, name: "Programación distribuida" },
 	{ id: 5, name: "Hilos" },
 	{ id: 6, name: "Arquitectura de aplicaciones" },
+	{ id: 8, name: "Programacion distribuida"},
 ];
 
 export const posts = [
@@ -363,7 +364,6 @@ export const posts = [
 			"Un WebSocket es un vínculo entre dos puntos con un servidor y un navegador, de tal forma que ambas partes puedan enviar y recibir datos sin necesidad de una petición Ajax y que se mantiene activo por más tiempo.",
 		content:
 			<>
-				<Image src="image-7.png" size={450} />
 				<Paragraph>
 					Un WebSocket es un vínculo entre dos puntos con un servidor y un navegador, de tal forma que ambas partes puedan enviar y recibir datos sin necesidad de una petición Ajax y que se mantiene activo por más tiempo. En un navegador que soporte HTML5 permite una comunicación constante hacia o desde un servidor web sin la necesidad de cargar una nueva página.
 				</Paragraph>
@@ -416,5 +416,72 @@ export const posts = [
 				</ul>
 			</>,
 		image: "image-6.jpg",
-	}
+	},
+	{
+		id: 9,
+		date: "Julio 4, 2022",
+		title: "Programacion distribuida",
+		weekNumber: 7,
+		unitsNumber: 4,
+		description:
+			"Es un paradigma de la programación enfocado en desarrollar sistemas distribuidos, abiertos, escalables, transparentes y tolerantes a fallos.",
+		content:
+			<>
+				<Image src="image-7.png" size={450} />
+				<Blockquote authorName="Manayay Chavez, 2015">
+					<Paragraph>
+						Es un paradigma de la programación enfocado en desarrollar sistemas distribuidos, abiertos, escalables, transparentes y tolerantes a fallos. Este paradigma es el resultado natural del uso de las computadoras y las redes.
+					</Paragraph>
+				</Blockquote>
+				<Paragraph>
+					La programación distribuida típicamente cae en algunas de las varias arquitecturas básicas como lo son:
+				</Paragraph>
+				<ul>
+					<li>Cliente-servidor</li>
+					<li>Tres-capas</li>
+					<li>N-capas</li>
+					<li>Objetos distribuidos</li>
+				</ul>
+				<h2>Remote procedure call (RPC)</h2>
+				<Paragraph>
+					Llamada por procedimiento remoto es una tecnología de comunicación orientada a procesos para aplicaciones cliente-servidor. También se conoce como llamadas de subrutina o llamadas de función.
+				</Paragraph>
+				<Paragraph>
+					El cliente tiene un mensaje de solicitud, y el RPC lo convierte y lo envía al servidor. Esta solicitud se puede llamar un proceso o función del servidor remoto. Cuando el servidor recibe la solicitud, envía la respuesta requerida nuevamente al cliente. El cliente se bloquea cuando el servidor maneja la llamada, y solo reanuda la ejecución después de que se complete el servidor.
+				</Paragraph>
+				<h3>Ventajas</h3>
+				<ul>
+					<li>Procedimiento remoto Llamada Soporta procesos y modelos roscados.</li>
+					<li>El mecanismo de transferencia de mensajes internos del RPC está oculto por el usuario. La carga de trabajo del código de reescritura y reevaluación es mínima en las llamadas de procedimientos remotos.</li>
+					<li>Las llamadas de proceso remoto se pueden usar en un entorno distribuido o en un entorno local.</li>
+					<li>Para mejorar el rendimiento, RPC omite muchas capas de protocolo.</li>
+				</ul>
+				<h3>Desventajas</h3>
+				<ul>
+					<li>La llamada de proceso remoto es un concepto que se puede implementar de diferentes maneras. No es un estándar.</li>
+					<li>RPC no tiene flexibilidad para arquitecturas de hardware. Solo se basa en la interacción</li>
+					<li>Las llamadas de proceso remoto aumentan el costo.</li>
+				</ul>
+				<h2>Remote method invocation (RMI)</h2>
+				<Paragraph>
+					Las aplicaciones RMI a menudo comprenden dos programas separados, un servidor y un cliente. Un programa de servidor típico crea algunos objetos remotos, hace referencias a estos objetos accesibles y espera a que los clientes invoquen métodos en estos objetos. Un programa cliente típico obtiene una referencia remota a uno o más objetos remotos en un servidor y luego invoca métodos en ellos. 
+				</Paragraph>
+				<Paragraph>
+					RMI proporciona el mecanismo por el cual el servidor y el cliente se comunican y pasan información de un lado a otro. Dicha aplicación a veces se denomina aplicación de objetos distribuidos.
+				</Paragraph>
+				<Paragraph>
+					El uso de RMI para desarrollar una aplicación distribuida implica estos pasos generales:
+				</Paragraph>
+				<ul>
+					<li>Diseñar e implementar los componentes de su aplicación distribuida.</li>
+					<li>Compilación de fuentes.</li>
+					<li>Hacer que las clases sean accesibles en red.</li>
+					<li>Iniciando la aplicación</li>
+				</ul>
+				<h2>Requerimientos para los servidores</h2>
+				<Paragraph>
+					RPC y RMI son similares, pero la diferencia básica entre RPC y RMI es que RPC admite la programación de procedimientos, por otro lado, RMI admite la programación orientada a objetos.
+				</Paragraph>
+			</>,
+	},
 ];
