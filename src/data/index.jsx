@@ -450,19 +450,36 @@ export const posts = [
 				<Paragraph>
 					El cliente tiene un mensaje de solicitud, y el RPC lo convierte y lo envía al servidor. Esta solicitud se puede llamar un proceso o función del servidor remoto. Cuando el servidor recibe la solicitud, envía la respuesta requerida nuevamente al cliente. El cliente se bloquea cuando el servidor maneja la llamada, y solo reanuda la ejecución después de que se complete el servidor.
 				</Paragraph>
-				<h3>Ventajas</h3>
-				<ul>
-					<li>Procedimiento remoto Llamada Soporta procesos y modelos roscados.</li>
-					<li>El mecanismo de transferencia de mensajes internos del RPC está oculto por el usuario. La carga de trabajo del código de reescritura y reevaluación es mínima en las llamadas de procedimientos remotos.</li>
-					<li>Las llamadas de proceso remoto se pueden usar en un entorno distribuido o en un entorno local.</li>
-					<li>Para mejorar el rendimiento, RPC omite muchas capas de protocolo.</li>
-				</ul>
-				<h3>Desventajas</h3>
-				<ul>
-					<li>La llamada de proceso remoto es un concepto que se puede implementar de diferentes maneras. No es un estándar.</li>
-					<li>RPC no tiene flexibilidad para arquitecturas de hardware. Solo se basa en la interacción</li>
-					<li>Las llamadas de proceso remoto aumentan el costo.</li>
-				</ul>
+				<h3>Ventajas y Desventajas</h3>
+				<table className="table table-bordered table-striped">
+					<thead className="bg-primary">
+						<tr>
+							<th>Ventajas</th>
+							<th>Desventajas</th>
+						</tr>
+					</thead>
+					<tbody className="text-justify">
+						<tr>
+							<td>
+								<ul style={{lineHeight: 1.5}}>
+									<li>Procedimiento remoto Llamada Soporta procesos y modelos roscados.</li>
+									<li>El mecanismo de transferencia de mensajes internos del RPC está oculto por el usuario. La carga de trabajo del código de reescritura y reevaluación es mínima en las llamadas de procedimientos remotos.</li>
+									<li>Las llamadas de proceso remoto se pueden usar en un entorno distribuido o en un entorno local.</li>
+									<li>Para mejorar el rendimiento, RPC omite muchas capas de protocolo.</li>
+								</ul>
+							</td>
+							<td>
+								<ul style={{lineHeight: 1.5}}>
+									<li>La llamada de proceso remoto es un concepto que se puede implementar de diferentes maneras. No es un estándar.</li>
+									<li>RPC no tiene flexibilidad para arquitecturas de hardware. Solo se basa en la interacción</li>
+									<li>Las llamadas de proceso remoto aumentan el costo.</li>
+								</ul>
+							</td>
+						</tr>
+
+					</tbody>
+				</table>
+
 				<h2>Remote method invocation (RMI)</h2>
 				<Image src="rmi.gif" size={400} />
 				<Paragraph>
@@ -485,50 +502,45 @@ export const posts = [
 					RPC y RMI son similares, pero la diferencia básica entre RPC y RMI es que RPC admite la programación de procedimientos, por otro lado, RMI admite la programación orientada a objetos.
 				</Paragraph>
 				<table className="table table-bordered table-striped">
-					<tr>
-						<th className="bg-primary">RCP</th>
-						<th className="bg-primary">RMI</th>
-					</tr>
-					<tr>
-						<td>RPC es una biblioteca y una plataforma dependiente del sistema operativo.</td>
-						<td>Considerando que es una plataforma Java.</td>
-					</tr>
-					<tr>
-						<td>RPC admite la programación de procedimientos.</td>
-						<td>RMI admite la programación orientada a objetos.</td>
-					</tr>
-					<tr>
-						<td>RPC es menos eficiente en comparación con RMI.</td>
-						<td>Mientras que RMI es más eficiente que RPC.</td>
-					</tr>
-					<tr>
-						<td>RPC genera más gastos generales.</td>
-						<td>Si bien crea menos gastos generales que RPC.</td>
-					</tr>
-					<tr>
-						<td>Los parámetros que se pasan en RPC son datos ordinarios o normales.</td>
-						<td>Mientras que en RMI, los objetos se pasan como parámetro.</td>
-					</tr>
-					<tr>
-						<td>RPC es la versión anterior de RMI.</td>
-						<td>Si bien es la versión sucesora de RPC.</td>
-					</tr>
-					<tr>
-						<td>RPC no proporciona ninguna seguridad.</td>
-						<td>Si bien proporciona seguridad a nivel de cliente.</td>
-					</tr>
-					<tr>
-						<td>Su costo de desarrollo es enorme.</td>
-						<td>Si bien su costo de desarrollo es justo o razonable.</td>
-					</tr>
-					<tr>
-						<td>Hay un gran problema de control de versiones en RPC.</td>
-						<td>Si bien es posible el control de versiones mediante RDMI.</td>
-					</tr>
-					<tr>
-						<td>Se necesitan múltiples códigos para una aplicación simple en RPC.</td>
-						<td>Si bien hay múltiples códigos, no son necesarios para una aplicación simple en RMI.</td>
-					</tr>
+					<thead className="bg-primary">
+						<tr>
+							<th>RCP</th>
+							<th>RMI</th>
+						</tr>
+					</thead>
+					<tbody className="text-justify">
+						<tr>
+							<td>
+								<ul style={{lineHeight: 1.5}}>
+									<li>RPC es una biblioteca y una plataforma dependiente del sistema operativo.</li>
+									<li>RPC admite la programación de procedimientos.</li>
+									<li>RPC es menos eficiente en comparación con RMI.</li>
+									<li>RPC genera más gastos generales.</li>
+									<li>Los parámetros que se pasan en RPC son datos ordinarios o normales.</li>
+									<li>RPC es la versión anterior de RMI.</li>
+									<li>RPC no proporciona ninguna seguridad.</li>
+									<li>Su costo de desarrollo es enorme.</li>
+									<li>Hay un gran problema de control de versiones en RPC.</li>
+									<li>Se necesitan múltiples códigos para una aplicación simple en RPC.</li>
+								</ul>
+							</td>
+							<td>
+								<ul style={{lineHeight: 1.5}}>
+									<li>Considerando que es una plataforma Java.</li>
+									<li>RMI admite la programación orientada a objetos.</li>
+									<li>Mientras que RMI es más eficiente que RPC.</li>
+									<li>Si bien crea menos gastos generales que RPC.</li>
+									<li>Mientras que en RMI, los objetos se pasan como parámetro.</li>
+									<li>Si bien es la versión sucesora de RPC.</li>
+									<li>Si bien proporciona seguridad a nivel de cliente.</li>
+									<li>Si bien su costo de desarrollo es justo o razonable.</li>
+									<li>Si bien es posible el control de versiones mediante RDMI.</li>
+									<li>Si bien hay múltiples códigos, no son necesarios para una aplicación simple en RMI.</li>
+								</ul>
+							</td>
+						</tr>
+
+					</tbody>
 				</table>
 			</>,
 			image: "programacion_distribuida.png",
