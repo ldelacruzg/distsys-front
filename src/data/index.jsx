@@ -11,8 +11,7 @@ export const units = [
 	{ id: 3, name: "Sockets" },
 	{ id: 4, name: "Programación distribuida" },
 	{ id: 5, name: "Hilos" },
-	{ id: 6, name: "Arquitectura de aplicaciones" },
-	{ id: 8, name: "Programacion distribuida"},
+	{ id: 6, name: "Arquitectura de aplicaciones" }
 ];
 
 export const posts = [
@@ -544,5 +543,201 @@ export const posts = [
 				</table>
 			</>,
 			image: "programacion_distribuida.png",
+	},
+	{
+		id: 10,
+		date: "Julio 18, 2022",
+		title: "Hilos",
+		weekNumber: 9,
+		unitsNumber: 5,
+		description:
+			"Un thread o hilo de ejecución es la ejecución secuencial de una serie de instrucciones dentro de un programa. ",
+		content:
+			<>
+				<Blockquote authorName="Angélica Nakayama, 2010">
+					<p>
+						Un hilo o thread es una secuencia de código que se ejecuta en el contexto de un proceso, porque los threads no pueden ejecutarse por sí solos, requieren un control de subproceso.
+					</p>
+				</Blockquote>
+				<Paragraph>
+					Un thread o hilo de ejecución es la ejecución secuencial de una serie de instrucciones dentro de un programa. De forma simple se puede pensar que los threads son procesos ejecutados por un programa. La mayoría de los lenguajes de programación son single-threaded El desarrollo del hardware ha llevado el concepto de thread a la CPU: multinúcleo.
+				</Paragraph>
+				<h1>Ciclo de vida de un hilo</h1>
+				<Paragraph>
+					Un thread puede estar en uno de los siguientes estados:
+				</Paragraph>
+				<Image src="Ciclo_de_vida_de_un_hilo.PNG" size={800} />
+				<ul>
+					<li>Running:</li>
+						<Paragraph> 
+							Se da cuando el thread se encuentra en curso de ejecucion o el thread tiene el control de la CPU
+						</Paragraph>
+					<li>Ready to run</li>
+						<Paragraph> 
+							Se da cuando el thread no presenta ningun inconveniente para ser ejecutado, y se encuentra a espera de una orden de ejecucion
+						</Paragraph>
+					<li>Suspended</li>
+						<Paragraph>
+							En este estado el thread, permite que otros threads sean ejecutados
+						</Paragraph>
+					<li>Blocked</li>
+						<Paragraph>
+							En este estado el thread se encuentra a la espera de un recurso o que ocurra un evento de ejecucion.
+						</Paragraph>
+					<li>Resumed</li>
+						<Paragraph>
+							Es similar al estado Ready to run, con la diferencia que este inicia cuando el thread ha sido suspendido o bloqueado.
+						</Paragraph>
+				</ul>
+				<h1>Prioridades</h1>
+				<Paragraph>
+					Las prioridades determinan que thread recibe el control de la CPU y consiga ser ejecutado primero. En Java viene definidas por un valor entero de 1 a 10. A mayor valor de prioridad, mayor la oportunidad de Java 9 ser ejecutado primero. Si dos threads tienen la misma prioridad, la ejecución depende del sistema operativo.
+				</Paragraph>
+				<table className="table table-bordered table-striped">
+					<thead className="bg-primary">
+						<tr>
+							<th>Constante</th>
+							<th>Prioridad</th>
+							<th>Nombre del thread</th>
+						</tr>
+					</thead>
+					<tbody className="text-justify">
+						<tr>
+							<td>
+								<Paragraph>
+									MAX_PRIORITY
+								</Paragraph>
+							</td>
+							<td>
+								<Paragraph>
+									10
+								</Paragraph>
+							</td>
+							<td>
+								<Paragraph>
+									Referencias
+								</Paragraph>
+							</td>
+						</tr>
+						<tr>	
+							<td></td>
+							<td>
+								<Paragraph>
+									8	
+								</Paragraph>
+							</td>
+							<td>
+								<Paragraph>
+									Finalizadores
+								</Paragraph>
+							</td>				
+						</tr>
+						<tr>
+							<td></td>
+							<td>
+								<Paragraph>
+									6
+								</Paragraph>
+							</td>
+							<td>
+								<Paragraph>
+									Eventos, metodos y acciones.
+								</Paragraph>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<Paragraph>
+									NORM_PRIORITY
+								</Paragraph>
+							</td>
+							<td>
+								<Paragraph>
+									5
+								</Paragraph>
+							</td>
+							<td>
+								<Paragraph>
+									MAIN
+								</Paragraph>
+							</td>
+						</tr>
+						<tr>
+							<td></td>
+							<td></td>
+							<td>
+								<Paragraph>
+									Despachador de señales
+								</Paragraph>
+							</td>
+						</tr>
+						<tr>
+							<td></td>
+							<td></td>
+							<td>
+								<Paragraph>
+									Kit de herramientas del sistema operativo
+								</Paragraph>
+							</td>
+						</tr>
+						<tr>
+							<td></td>
+							<td></td>
+							<td>
+								<Paragraph>
+									Post-Eventos
+								</Paragraph>
+							</td>
+						</tr>
+						<tr>
+							<td></td>	
+							<td>
+								<Paragraph>
+									4
+								</Paragraph>
+							</td>
+							<td>
+								<Paragraph>
+									Actualizador de pantalla
+								</Paragraph>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<Paragraph>
+									MIN_PRIORITY
+								</Paragraph>
+							</td>
+							<td>
+								<Paragraph>
+									1
+								</Paragraph>
+							</td>
+							<td>
+								-
+							</td>
+						</tr>
+					</tbody>
+				</table>
+				<h1>Sincronizacion</h1>
+				<Paragraph>
+					El hecho de que varios hilos compartan el mismo espacio de memoria puede causar problemas como interferencias e inconsistencias en los datos. A este paso se lo denomina condición de carrera. Esta situación se puede evitar sincronizando los threads que acceden al recurso común. La operación de sincronización es un mecanismo de exclusión mutua de threads, es decir, no puede ser interrumpida. 
+				</Paragraph>
+				<Paragraph>
+					La sincronización puede ser ejecutada por medio del método synchronized, el cual se puede ejecutar de dos formas:
+				</Paragraph>
+				<ul>
+					<li>
+						Usar sobre el objeto que simbolice el thread que se desee sincronizar.
+					</li>
+					<li>
+						Usar sobre un objeto que común entre varios threads.
+					</li>
+				</ul>
+				<Paragraph>
+					Algunos hilos necesitan esperar a otros para disponer de datos importantes o evitar problemas de acceso simultáneo a recursos
+				</Paragraph>
+			</>,
+			image: "Threads.png",
 	},
 ];
