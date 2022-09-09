@@ -1,25 +1,40 @@
 .text-size-16,
 .row ul li {
-	font-size: 16px;
+  font-size: 16px;
 }
 
 .imageP {
-	text-align: center;
+  text-align: center;
 }
 
 .imageP img {
-	height: 220px;
+  height: 220px;
 }
 
 blockquote {
-	text-align: justify;
+  text-align: justify;
 }
 
 table thead th {
-	text-align: center;
+  text-align: center;
 }
 
 h4 {
-	text-align: center;
-	font-weight: bold;
+  text-align: center;
+  font-weight: bold;
+}
+
+.blog-post-item p {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+  overflow: hidden;
+}
+
+.blog-post-item h2 {
+  height: 70px;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
 }

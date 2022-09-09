@@ -5,18 +5,17 @@ import SidebarLeft from "./components/SidebarLeft";
 
 const Blog = () => {
   const { postsProvider: posts } = useContext(PostsContext);
-  const [postsSliceFull, setPostsSliceFull] = useState([])
+  const [postsSliceFull, setPostsSliceFull] = useState([]);
   // partir un arreglo en 3
 
   useEffect(() => {
-    let slicePosts = []
-    for (let i = 0; i < posts.length;) {
-      slicePosts.push(posts.slice(i, i += 3));
+    let slicePosts = [];
+    for (let i = 0; i < posts.length; ) {
+      slicePosts.push(posts.slice(i, (i += 3)));
     }
     setPostsSliceFull(slicePosts);
   }, [posts]);
 
-  console.log(postsSliceFull);
   return (
     <div className="container">
       <div className="row">
