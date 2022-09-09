@@ -740,4 +740,76 @@ export const posts = [
 			</>,
 			image: "Threads.png",
 	},
+	{
+		id: 11,
+		date: "Agosto 01, 2022",
+		title: "Arquitectura de aplicaciones",
+		weekNumber: 11,
+		unitsNumber: 6,
+		description:
+			"Una arquitectura de aplicaciones describe los patrones y las técnicas que se utilizan para diseñar y desarrollar aplicaciones. La arquitectura le proporciona un plan y las prácticas recomendadas que debe seguir para diseñar una aplicación bien estructurada.",
+		content:
+			<>
+			<h1>Arquitectura orientada a modelos</h1>
+				<Paragraph>
+					La Arquitectura Dirigida por Modelos (MDA) es un marco arquitectónico abierto y neutral de proveedores que aprovecha los estándares patrocinados por Object Management Group (OMG) que están asociados en el ciclo de vida de desarrollo de sistemas a través de varios dominios y tecnologías. La MDA apoya ampliamente diferentes tipos de dominios de aplicaciones y plataformas tecnológicas.
+				</Paragraph>
+				<Blockquote authorName="Leopoldo Vanegas, 2014">
+					<p>
+						La Arquitectura basada por modelos lleva a resolver problemas de tiempo, costos y calidad asociados al desarrollo del software. En este contexto MDA proporciona un marco de trabajo en el cual es posible especificar modelos, en diferentes niveles de abstracción, y pasar desde un modelo a otro por medio de transformaciones. Dichas transformaciones de modelos deben ser expresadas de manera clara y precisa, usando un lenguaje definido para ese propósito. 
+					</p>
+				</Blockquote>
+				<Paragraph>
+					La MDA permite transformar o convertir los modelos independientes de la plataforma para producir modelos específicos de la plataforma mediante asignaciones. Dentro del proceso de ciclo de vida de desarrollo del sistema, la MDA se aplica modelos independientes de la plataforma y los modelos específicos de la plataforma para sostener y aprovechar las inversiones en los requisitos, las tecnologías y el ciclo de vida que sirve de puente entre ellos, ya que independientemente cambian. Este enfoque conduce generalmente a la flexibilidad a largo plazo de las implementaciones, la integración, el mantenimiento, las pruebas y simulación, así como la portabilidad, la interoperabilidad y la reutilización.
+				</Paragraph>
+			<h1>Arquitectura orientada a capas</h1>
+			<blockquote authorName="Elizabeth Acosta, 2006">
+				<p>
+					El concepto de capas (tiers), proporciona una manera conveniente para agrupar diferentes clases de arquitectura. Así, si una aplicación se ejecuta en una computadora, ésta tiene una arquitectura de una capa (one-tiers), si la aplicación se está ejecutando dos computadoras.
+				</p>
+			</blockquote>
+				<Paragraph>
+					Una aplicación de tres capas suma un tercer programa, comúnmente una base de datos, en la cual el servidor almacena información. Este tipo de aplicaciones es una mejora incremental a la arquitectura de dos capas; así, si una solicitud llega de un cliente a un servidor, éste solicita o almacena información en la base de datos, la base regresa información al servidor, y el servidor regresa la información al cliente. 
+				</Paragraph>
+				<Paragraph>
+					Una arquitectura de múltiples capas (n-tiers), permite que un número ilimitado de programas corra simultáneamente, enviando información de uno a otro, utilizando diferentes protocolos para comunicarse e interactuar simultáneamente; esto permite crear aplicaciones más poderosas que proporcionen diversos servicios a varios clientes
+				</Paragraph>
+				<h1>Arquitectura orientada a servicios</h1>
+					<Paragraph>
+						Una arquitectura orientada a servicios (SOA) es una evolución de la llamada computación distribuida, basada en el paradigma de pregunta/respuesta para aplicaciones sincrónicas y asincrónicas. En ella la lógica de negocios o las funciones individuales son modularizadas y presentadas como servicios para aplicaciones consumidoras/clientes. Lo que es clave de estos servicios es su naturaleza desacoplada; la interfaz de servicios es independiente de la implementación.
+					</Paragraph>
+					<Paragraph>
+						Una estrategia de aplicaciones debe facilitar su integración. Además, que debe motivar la construcción de servicios, más que aplicaciones. Estos servicios se encargarían de exponer una funcionalidad bien definida a la aplicación que la requiera.
+					</Paragraph>
+					<Paragraph>
+						SOA propone un nuevo modelo de estructuración, orientado a atacar la definición de arquitecturas en vez de la definición de aplicaciones individuales. Desarrollar procesos de negocio como Servicios es la clave de la flexibilidad de la arquitectura, esto permite que otros componentes funcionales hagan uso de diferentes servicios de manera natural con independencia de su ubicación.
+					</Paragraph>
+				<h2>Servicios SOAP</h2>
+					<Paragraph>
+						Describiremos a los Servicios Web SOAP como el intercambio, entre sistemas, de mensajes basados en SOAP. El Servicio Web basado en SOAP implica envío de mensajes a través de XML. Los mensajes en las transacciones de las aplicaciones, incorpora muchos niveles de seguridad y aspectos del middleware tradicional que a nivel de aplicaciones empresarial son variables que toman gran importancia, sobre todo en la interoperabilidad entre aplicaciones
+					</Paragraph>
+					<blockquote authorname="Marcelo Castro, 2013">
+						<p>Básicamente SOAP utiliza HTTP como medio de transporte, dando lugar a lenguajes de alto nivel para implementar el servicio y también hace uso del protocolo XML-RPC (Remote Procedure Call), los que hacen referencia a tecnologías aplicadas en un entorno aislado, donde se tiene un conocimiento particularizado del ambiente. La interoperabilidad se efectúa con la adecuación de cada cliente o usuario, donde se necesita organizar frameworks que permitan evolucionar a la par de las modificaciones, sobre todo cuando el cliente no posee la misma API</p>
+					</blockquote>
+				<h2>Servicio RESTfull</h2>
+					<Paragraph>
+						El término REST proviene de la tesis doctoral de Roy Fielding, publicada en el año 2000, y significa REpresentational State Transfer. REST es un conjunto de restricciones que, cuando son aplicadas al diseño de un sistema, crean un estilo arquitectónico de software.
+					</Paragraph>
+					<Paragraph>
+						Dicho estilo arquitectónico se caracteriza por:
+					</Paragraph>
+					<ul>
+						<li>Debe ser un sistema cliente-servidor</li>
+						<li>Tiene que ser sin estado, es decir, no hay necesidad de que los servicios guarden las sesiones de los usuarios</li>
+						<li>Debe soportar un sistema de cachés: la infraestructura de la red debería soportar caché en diferentes niveles</li>
+						<li>Debe ser un sistema uniformemente accesible (con una interfaz uniforme): cada recurso debe tener una única dirección y un punto válido de acceso. Los recursos se identifican con URLs, lo cual proporciona un espacio de direccionamiento global para el descubrimiento del servicio y de los recursos</li>
+						<li>Tiene que ser un sistema por capas: por lo tanto, debe soportar escalabilidad</li>
+						<li>Debe utilizar mensajes autodescriptivos: los recursos se desacoplan de su representación de forma que puedan ser accedidos en una variedad de formatos, como por ejemplo XML, HTML, texto plano, PDF, JPEG, JSON, etc.</li>
+					</ul>
+					<Paragraph>
+						Estas restricciones no dictan qué tipo de tecnología utilizar; solamente definen cómo se transfieren los datos entre componentes y qué beneficios se obtienen siguiendo estas restricciones. Por lo tanto, un sistema RESTful puede implementarse en cualquier arquitectura de la red disponible. Y lo que es más importante, no es necesario "inventar" nuevas tecnologías o protocolos de red: podemos utilizar las infraestructuras de red existentes, tales como la Web, para crear arquitecturas RESTful
+					</Paragraph>
+			</>,
+		image: "arquitectura_aplicaciones.png",
+	},
 ];
